@@ -23,7 +23,7 @@ func New() *TagCloud {
 // AddTag should add a tag to the cloud if it wasn't present and increase tag occurrence count
 // thread-safety is not needed
 func (tc *TagCloud) AddTag(tagName string) {
-	tc.storage[tagName] += 1
+	tc.storage[tagName]++
 }
 
 // TopN should return top N most frequent tags ordered in descending order by occurrence count
